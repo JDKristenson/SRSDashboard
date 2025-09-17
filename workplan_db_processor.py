@@ -288,9 +288,9 @@ class WorkplanDatabaseManager:
         self._load_from_database()
     
     def _get_default_tasks_data(self):
-        """Get default tasks data structure"""
+        """Get default tasks data structure - all 20 tasks"""
         return [
-            # Business Operations Development tasks
+            # Business Operations Development tasks (8 tasks)
             {
                 "id": "BO001",
                 "title": "Business Requirements Assessment",
@@ -298,13 +298,7 @@ class WorkplanDatabaseManager:
                 "category": "Business Operations Development (2)",
                 "priority": TaskPriority.HIGH,
                 "estimated_hours": 40,
-                "subtasks": [
-                    "Conduct stakeholder interviews",
-                    "Document current state processes",
-                    "Identify scaling bottlenecks",
-                    "Define future state requirements",
-                    "Create requirements consolidation report"
-                ]
+                "subtasks": ["Conduct stakeholder interviews", "Document current state processes", "Identify scaling bottlenecks", "Define future state requirements", "Create requirements consolidation report"]
             },
             {
                 "id": "BO002", 
@@ -313,15 +307,63 @@ class WorkplanDatabaseManager:
                 "category": "Business Operations Development (2)",
                 "priority": TaskPriority.HIGH,
                 "estimated_hours": 60,
-                "subtasks": [
-                    "Review prior assessment findings",
-                    "Design target operating model",
-                    "Create discipline-specific implementation plans",
-                    "Define organizational structure",
-                    "Document process flows"
-                ]
+                "subtasks": ["Review prior assessment findings", "Design target operating model", "Create discipline-specific implementation plans", "Define organizational structure", "Document process flows"]
             },
-            # Financial Excellence tasks
+            {
+                "id": "BO003",
+                "title": "Business Discipline Maturity Framework",
+                "description": "Codify requisite business discipline maturity, with associated 'heatmap' to prioritize development",
+                "category": "Business Operations Development (2)",
+                "priority": TaskPriority.HIGH,
+                "estimated_hours": 32,
+                "subtasks": ["Define maturity levels for each discipline", "Assess current maturity state", "Create maturity heatmap", "Prioritize development areas", "Document maturity framework"]
+            },
+            {
+                "id": "BO004",
+                "title": "Implementation Plan Execution",
+                "description": "Support implementation plan execution, with initial emphasis on HR, technology, and contract compliance",
+                "category": "Business Operations Development (2)",
+                "priority": TaskPriority.HIGH,
+                "estimated_hours": 80,
+                "subtasks": ["Establish HR implementation workstream", "Launch technology upgrade initiatives", "Implement contract compliance framework", "Monitor implementation progress", "Provide ongoing execution support"]
+            },
+            {
+                "id": "BO005",
+                "title": "Progress Monitoring & Reporting",
+                "description": "Monitor, evaluate, and report implementation progress",
+                "category": "Business Operations Development (2)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 24,
+                "subtasks": ["Establish progress tracking metrics", "Create reporting templates", "Conduct weekly progress reviews", "Generate monthly progress reports", "Present findings to leadership"]
+            },
+            {
+                "id": "BO006",
+                "title": "Business Operations Rhythm",
+                "description": "Establish long-term business operations operating rhythm, to include governance, decision rights, and meeting/decision cadence",
+                "category": "Business Operations Development (2)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 36,
+                "subtasks": ["Design governance structure", "Define decision rights matrix", "Establish meeting cadences", "Create decision-making processes", "Document operating rhythm"]
+            },
+            {
+                "id": "BO007",
+                "title": "Risk & Opportunity Register",
+                "description": "Document and codify risk and opportunity register for regular Client leadership review",
+                "category": "Business Operations Development (2)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 28,
+                "subtasks": ["Identify program risks and opportunities", "Create risk assessment framework", "Establish opportunity evaluation process", "Document register format", "Schedule regular leadership reviews"]
+            },
+            {
+                "id": "BO008",
+                "title": "Stakeholder Engagement Support",
+                "description": "Support Client engagement with key program stakeholders",
+                "category": "Business Operations Development (2)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 32,
+                "subtasks": ["Map key stakeholders", "Develop engagement strategy", "Prepare stakeholder communications", "Facilitate stakeholder meetings", "Maintain stakeholder relationships"]
+            },
+            # Financial Excellence tasks (9 tasks)
             {
                 "id": "FE001",
                 "title": "Interim CFO Function",
@@ -329,15 +371,81 @@ class WorkplanDatabaseManager:
                 "category": "Financial Excellence (2)",
                 "priority": TaskPriority.HIGH,
                 "estimated_hours": 120,
-                "subtasks": [
-                    "Establish CFO operational framework",
-                    "Implement financial controls",
-                    "Oversee cash flow management",
-                    "Provide strategic financial guidance",
-                    "Report to board/leadership"
-                ]
+                "subtasks": ["Establish CFO operational framework", "Implement financial controls", "Oversee cash flow management", "Provide strategic financial guidance", "Report to board/leadership"]
             },
-            # Leadership Support tasks
+            {
+                "id": "FE002",
+                "title": "Financial Data Integration",
+                "description": "Collect, integrate and analyze financial inputs from each Client activity",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.HIGH,
+                "estimated_hours": 48,
+                "subtasks": ["Map all financial data sources", "Establish data collection processes", "Create integration workflows", "Develop analytical frameworks", "Generate integrated reports"]
+            },
+            {
+                "id": "FE003",
+                "title": "Integrated Financial Model",
+                "description": "Build upon prior models to create integrated financial model for expansion program",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.HIGH,
+                "estimated_hours": 56,
+                "subtasks": ["Review existing financial models", "Design integrated model architecture", "Build expansion scenario models", "Validate model assumptions", "Document model methodology"]
+            },
+            {
+                "id": "FE004",
+                "title": "Scenario & Sensitivity Analysis",
+                "description": "Conduct scenario and sensitivity analyses",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.HIGH,
+                "estimated_hours": 40,
+                "subtasks": ["Define scenario parameters", "Build sensitivity analysis framework", "Run multiple scenario models", "Analyze results and implications", "Present findings to leadership"]
+            },
+            {
+                "id": "FE005",
+                "title": "Program Risk Identification",
+                "description": "Use financial information to identify key program risks at scale",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.HIGH,
+                "estimated_hours": 32,
+                "subtasks": ["Analyze financial risk indicators", "Identify scaling risk factors", "Quantify potential risk impact", "Develop risk mitigation strategies", "Create risk monitoring dashboard"]
+            },
+            {
+                "id": "FE006",
+                "title": "Employee Retention Incentives",
+                "description": "Work with Client HR lead to incentivize long-term employee retention and platform expansion",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 24,
+                "subtasks": ["Analyze current retention metrics", "Design retention incentive programs", "Model financial impact of retention", "Collaborate with HR on implementation", "Monitor program effectiveness"]
+            },
+            {
+                "id": "FE007",
+                "title": "Financial Guidance & Decision Support",
+                "description": "Provide financial guidance to other Client employees and decisions",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 36,
+                "subtasks": ["Establish financial advisory framework", "Create decision support tools", "Provide ongoing financial coaching", "Review major financial decisions", "Document guidance processes"]
+            },
+            {
+                "id": "FE008",
+                "title": "Formal FP&A Function",
+                "description": "Implement formal FP&A function",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 44,
+                "subtasks": ["Design FP&A organizational structure", "Implement planning processes", "Establish budgeting and forecasting", "Create performance analytics", "Train staff on FP&A processes"]
+            },
+            {
+                "id": "FE009",
+                "title": "External Stakeholder Support",
+                "description": "Support financial inquiries from external Client stakeholders",
+                "category": "Financial Excellence (2)",
+                "priority": TaskPriority.LOW,
+                "estimated_hours": 20,
+                "subtasks": ["Identify external stakeholders", "Prepare stakeholder information packages", "Respond to financial inquiries", "Maintain stakeholder relationships", "Document all interactions"]
+            },
+            # CEO and Client Leadership Support tasks (3 tasks)
             {
                 "id": "CL001",
                 "title": "Ad Hoc Issue Support",
@@ -345,13 +453,25 @@ class WorkplanDatabaseManager:
                 "category": "CEO and Client Leadership Support (1)",
                 "priority": TaskPriority.HIGH,
                 "estimated_hours": 40,
-                "subtasks": [
-                    "Establish issue escalation process",
-                    "Create rapid response framework",
-                    "Maintain issue tracking system",
-                    "Provide timely issue resolution",
-                    "Document lessons learned"
-                ]
+                "subtasks": ["Establish issue escalation process", "Create rapid response framework", "Maintain issue tracking system", "Provide timely issue resolution", "Document lessons learned"]
+            },
+            {
+                "id": "CL002",
+                "title": "Presentation & Meeting Materials",
+                "description": "Prepare presentation and meeting materials for Client leadership",
+                "category": "CEO and Client Leadership Support (1)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 32,
+                "subtasks": ["Create presentation templates", "Develop executive dashboard content", "Prepare board meeting materials", "Design stakeholder presentations", "Maintain materials library"]
+            },
+            {
+                "id": "CL003",
+                "title": "Direct Meeting Support",
+                "description": "Provide direct meeting support to Client leadership",
+                "category": "CEO and Client Leadership Support (1)",
+                "priority": TaskPriority.MEDIUM,
+                "estimated_hours": 48,
+                "subtasks": ["Attend leadership meetings", "Provide real-time analytical support", "Take meeting notes and actions", "Follow up on meeting outcomes", "Coordinate meeting logistics"]
             }
         ]
     
@@ -389,13 +509,82 @@ class WorkplanDatabaseManager:
     
     def _create_default_data(self):
         """Create default in-memory data for fallback"""
-        # This is the same structure as the original workplan_processor.py
-        # Used when database is not available
-        from workplan_processor import WorkplanManager
-        temp_manager = WorkplanManager()
-        self.categories = temp_manager.categories
-        self.tasks = temp_manager.tasks
-        self.timeline_weeks = temp_manager.timeline_weeks
+        # Create default data structure when database is not available
+        self._build_default_categories_structure()
+        self._build_default_tasks_structure()
+        self._build_default_timeline_structure()
+    
+    def _build_default_categories_structure(self):
+        """Build default categories structure"""
+        self.categories = {
+            "Business Operations Development (2)": {
+                'description': "Comprehensive business operations development and scaling support",
+                'team_size': 2,
+                'total_estimated_hours': 332,
+                'tasks': []
+            },
+            "Financial Excellence (2)": {
+                'description': "Financial leadership, modeling, and FP&A implementation", 
+                'team_size': 2,
+                'total_estimated_hours': 420,
+                'tasks': []
+            },
+            "CEO and Client Leadership Support (1)": {
+                'description': "Executive support and leadership meeting facilitation",
+                'team_size': 1, 
+                'total_estimated_hours': 120,
+                'tasks': []
+            }
+        }
+    
+    def _build_default_tasks_structure(self):
+        """Build default tasks structure"""
+        tasks_data = self._get_default_tasks_data()
+        
+        # Create task objects and populate categories
+        for task_data in tasks_data:
+            task = Task(
+                id=task_data["id"],
+                title=task_data["title"],
+                description=task_data["description"],
+                category=task_data["category"],
+                priority=task_data["priority"],
+                status=TaskStatus.NOT_STARTED,
+                estimated_hours=task_data["estimated_hours"],
+                subtasks=task_data["subtasks"]
+            )
+            self.tasks[task.id] = task
+            
+            # Add to category tasks
+            if task.category in self.categories:
+                task_dict = {
+                    'id': task.id,
+                    'title': task.title,
+                    'description': task.description,
+                    'priority': task.priority,
+                    'estimated_hours': task.estimated_hours,
+                    'subtasks': task.subtasks
+                }
+                self.categories[task.category]['tasks'].append(task_dict)
+    
+    def _build_default_timeline_structure(self):
+        """Build default timeline structure"""
+        start_date = datetime(2025, 9, 1)
+        end_date = datetime(2025, 12, 12)
+        current_date = start_date
+        week_num = 1
+        
+        while current_date <= end_date:
+            week_end = min(current_date + timedelta(days=6), end_date)
+            self.timeline_weeks.append({
+                "week_number": week_num,
+                "start_date": current_date,
+                "end_date": week_end,
+                "month": current_date.strftime("%B %Y"),
+                "tasks": []
+            })
+            current_date += timedelta(days=7)
+            week_num += 1
     
     # Database operations
     def save_task(self, task: Task):
